@@ -1,11 +1,11 @@
 import { Component, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'my-component',
-  styleUrl: 'my-component.css',
+  tag: 'limec-component',
+  styleUrl: 'limec-component.css',
   shadow: true
 })
-export class MyComponent {
+export class LimecComponent {
 
   @Prop() first: string;
   @Prop() last: string;
