@@ -10,14 +10,18 @@ import { LimeWebComponentPlatform } from 'lime-web-component-interfaces/lime-web
 export class LimecComponent implements LimeWebComponent {
   @Prop() limeWebComponentPlatform: LimeWebComponentPlatform
 
-  @Prop() first: string;
-  @Prop() last: string;
-
   render() {
     return (
       <div>
-        Hello, World! I'm {this.first} {this.last}
+        Hello, World!
+        <button onClick={ () => this.usePlatformFunction() }>
+          Click me!
+        </button>
       </div>
     );
+  }
+
+  usePlatformFunction() {
+    this.limeWebComponentPlatform.alertMessage('sup')
   }
 }

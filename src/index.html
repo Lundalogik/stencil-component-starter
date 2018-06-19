@@ -5,11 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>Stencil Component Starter</title>
   <script src="/build/limeccomponent.js"></script>
-
+  <script src="/lime-web-component-platform.browser.js"></script>
 </head>
 <body>
+  <script>
+    // instantiate mock platform and attach it to the limec-component
+    const limeWebComponentPlatformBrowser = new LimeWebComponentPlatformBrowser()
+    const limecComponent = document.createElement('limec-component')
+    limecComponent.limeWebComponentPlatform = limeWebComponentPlatformBrowser
 
-  <limec-component first="Stencil" last="'Don't call me a framework' JS"></limec-component>
-
+    // render limec-component
+    document.getElementsByTagName('body')[0].appendChild(limecComponent);
+  </script>
 </body>
 </html>

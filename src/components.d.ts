@@ -34,8 +34,6 @@ declare global {
 
   namespace StencilComponents {
     interface LimecComponent {
-      'first': string;
-      'last': string;
       'limeWebComponentPlatform': LimeWebComponentPlatform;
     }
   }
@@ -59,8 +57,6 @@ declare global {
   }
   namespace JSXElements {
     export interface LimecComponentAttributes extends HTMLAttributes {
-      'first'?: string;
-      'last'?: string;
       'limeWebComponentPlatform'?: LimeWebComponentPlatform;
     }
   }
