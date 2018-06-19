@@ -18,7 +18,9 @@
     "test.watch": "jest --watch",
     "format": "prettier --write \"src/**/*.ts\""
   },
-  "dependencies": {},
+  "dependencies": {
+    "lime-web-component-interfaces": "github:Lundalogik/lime-web-component-interfaces"
+  },
   "devDependencies": {
     "@stencil/core": "^0.9.1",
     "@stencil/dev-server": "latest",

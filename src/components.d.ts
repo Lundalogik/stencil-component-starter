@@ -13,9 +13,12 @@ declare global {
   }
   namespace JSXElements {}
 
+  interface HTMLElement {
+    componentOnReady?: () => Promise<this | null>;
+  }
+
   interface HTMLStencilElement extends HTMLElement {
     componentOnReady(): Promise<this>;
-    componentOnReady(done: (ele?: this) => void): void;
 
     forceUpdate(): void;
   }
@@ -23,6 +26,9 @@ declare global {
   interface HTMLAttributes {}
 }
 
+import {
+  LimeWebComponentPlatform,
+} from 'lime-web-component-interfaces/lime-web-component-platform.interface';
 
 declare global {
 
@@ -30,6 +36,7 @@ declare global {
     interface LimecComponent {
       'first': string;
       'last': string;
+      'limeWebComponentPlatform': LimeWebComponentPlatform;
     }
   }
 
@@ -54,6 +61,7 @@ declare global {
     export interface LimecComponentAttributes extends HTMLAttributes {
       'first'?: string;
       'last'?: string;
+      'limeWebComponentPlatform'?: LimeWebComponentPlatform;
     }
   }
 }
