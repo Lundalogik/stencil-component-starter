@@ -11,7 +11,8 @@ exports.config = {
   ],
   copy: [
     {
-      src: 'lime-web-component-platform.browser.js'
+      src: 'lime-web-component-platform.browser.js',
+      src: 'lime-web-component.manifest.json'
     }
   ]
 };

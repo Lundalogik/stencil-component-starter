@@ -14,14 +14,21 @@ export class LimecComponent implements LimeWebComponent {
     return (
       <div>
         Hello, World!
-        <button onClick={ () => this.usePlatformFunction() }>
-          Click me!
+        <button onClick={ () => this.usePlatformAlert() }>
+          alert
+        </button>
+        <button onClick={ () => this.usePlatformLog() }>
+          log
         </button>
       </div>
     );
   }
 
-  usePlatformFunction() {
-    this.limeWebComponentPlatform.alertMessage('sup')
+  usePlatformAlert() {
+    this.limeWebComponentPlatform.alertMessage('alerting things')
+  }
+
+  usePlatformLog() {
+    this.limeWebComponentPlatform.logMessage('logging things')
   }
 }
